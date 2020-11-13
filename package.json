@@ -1,0 +1,16 @@
+{
+  "name": "opendata-stories",
+  "version": "1.0.0",
+  "scripts": {
+    "jupyter-html-index": "docker run --rm -v \"$(pwd):/data\" -w /data -u root jupyter/nbviewer jupyter nbconvert --to html --output \"index.html\"",
+    "jupyter-html-story": "docker run --rm -v \"$(pwd):/data\" -w /data -u root jupyter/nbviewer jupyter nbconvert --to html --template basic --output \"story.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otevrena-data-mfcr/opendata-stories.git"
+  },
+  "bugs": {
+    "url": "https://github.com/otevrena-data-mfcr/opendata-stories/issues"
+  },
+  "homepage": "https://github.com/otevrena-data-mfcr/opendata-stories#readme"
+}
