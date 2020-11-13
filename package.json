@@ -2,8 +2,12 @@
   "name": "opendata-stories",
   "version": "1.0.0",
   "scripts": {
-    "jupyter-html-index": "docker run --rm -v \"$(pwd):/data\" -w /data -u root jupyter/nbviewer jupyter nbconvert --to html --output \"index.html\"",
-    "jupyter-html-story": "docker run --rm -v \"$(pwd):/data\" -w /data -u root jupyter/nbviewer jupyter nbconvert --to html --template basic --output \"story.html\""
+    "jupyter-html-index": "jupyter nbconvert --to html --template lab --output \"index.html\"",
+    "jupyter-html-story": "jupyter nbconvert --to html --template basic --output \"story.html\"",
+    "jupyter-html-slides": "jupyter nbconvert --to slides",
+    "docker-jupyter-html-index": "docker run --rm -v \"$(pwd):/data\" -w /data -u root jupyter/base-notebook jupyter nbconvert --to html --template lab --output \"index.html\"",
+    "docker-jupyter-html-story": "docker run --rm -v \"$(pwd):/data\" -w /data -u root jupyter/base-notebook jupyter nbconvert --to html --template basic --output \"story.html\"",
+    "docker-jupyter-html-slides": "docker run --rm -v \"$(pwd):/data\" -w /data -u root jupyter/base-notebook jupyter nbconvert --to slides"
   },
   "repository": {
     "type": "git",
