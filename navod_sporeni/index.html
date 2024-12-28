@@ -14264,7 +14264,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>V následujících řádcích se pokusíme ilustrovat použití otevřených dat publikovaných na našem portálu. Konkrétně půjde o datové sady <a href="https://opendata.mfcr.cz/topics/stavebni-sporeni.html">Vývoj stavebního spoření</a> a <a href="https://opendata.mfcr.cz/topics/penzijni.html">Penzijní připojištění a spoření</a> a jejich zpracování bude prezentováno v programovacím jazyce Python. Mimo to se zde pokusíme poukázat na problémy, které se zpracováním dat souvisejí a které se neomezují pouze na tyto dvě datové sady.</p>
+<p>V následujících řádcích se pokusíme ilustrovat použití otevřených dat publikovaných na našem portálu. Konkrétně půjde o datové sady <a href="https://data.mf.gov.cz/topics/stavebni-sporeni.html">Vývoj stavebního spoření</a> a <a href="https://data.mf.gov.cz/topics/penzijni.html">Penzijní připojištění a spoření</a> a jejich zpracování bude prezentováno v programovacím jazyce Python. Mimo to se zde pokusíme poukázat na problémy, které se zpracováním dat souvisejí a které se neomezují pouze na tyto dvě datové sady.</p>
 <p>Zabývat se budeme především tím, jak se do dat promítly konkrétní události a jaké trendy můžeme vypozorovat. Také budeme zkoumat, zdali spolu tato data nějak souvisí, tedy jestli se sklon k ukládání úspor formou stavebního spoření vyvíjí v čase podobně, jako je tomu u spoření penzijního.</p>
 
 </div>
@@ -14286,7 +14286,7 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">stavebni</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://opendata.mfcr.cz/exports/stavebni_sporeni/csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;rok&quot;</span><span class="p">,</span><span class="s2">&quot;ctvrtleti&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">stavebni</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://data.mf.gov.cz/exports/stavebni_sporeni/csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;rok&quot;</span><span class="p">,</span><span class="s2">&quot;ctvrtleti&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">stavebni</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
@@ -14336,7 +14336,7 @@ dtype: object</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Z tohoto přehledu, stejně jako ze struktury dat na <a href="https://opendata.mfcr.cz/topics/stavebni-sporeni.html">našem portálu</a>, víme, že každý záznam je identifikován rokem a čtvrtletím. Koukneme se tedy, které jejich kombinace v datové sadě jsou:</p>
+<p>Z tohoto přehledu, stejně jako ze struktury dat na <a href="https://data.mf.gov.cz/topics/stavebni-sporeni.html">našem portálu</a>, víme, že každý záznam je identifikován rokem a čtvrtletím. Koukneme se tedy, které jejich kombinace v datové sadě jsou:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14718,7 +14718,7 @@ dtype: object</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">penzijni</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://opendata.mfcr.cz/exports/penzijni_sporeni/csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;rok&quot;</span><span class="p">,</span><span class="s2">&quot;ctvrtleti&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">penzijni</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://data.mf.gov.cz/exports/penzijni_sporeni/csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;rok&quot;</span><span class="p">,</span><span class="s2">&quot;ctvrtleti&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">penzijni</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
